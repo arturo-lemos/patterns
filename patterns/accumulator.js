@@ -23,6 +23,19 @@ export function sumToN(n) {
  */
 export function factorial(n) {
   // TODO
+  if (typeof n !== "number") {
+    return NaN;
+  } else if (n < 0) {
+    return undefined;
+  } else if (n === 0) return 1;
+  //
+  // I had to play around with this for loop. I originally used let product = 0 and product += i, but when I saw it wasn't passing the test I changed it until it worked.
+  //
+  let product = 1;
+  for (let i = 1; i <= n; i++) {
+    product *= i;
+  }
+  return product;
 }
 
 /**
@@ -33,6 +46,20 @@ export function factorial(n) {
  */
 export function buildNArray(n) {
   // TODO
+  if (typeof n !== "number") {
+    return null;
+  } else if (n <= 0) {
+    return [];
+    //
+    // I am feeling very comfortable with these kinds of for loops. I know you discussed in class how to clean up the code but I am just focusing on getting it done for now.
+    //
+  } else {
+    let x = [];
+    for (let i = 1; i <= n; i++) {
+      x.push(i);
+    }
+    return x;
+  }
 }
 
 /**
