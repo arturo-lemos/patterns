@@ -68,6 +68,7 @@ export function buildNArray(n) {
  */
 export function getLongestString(strings) {
   // TODO
+  return strings.reduce((longest, current) => current.length > longest.length);
 }
 
 /**
@@ -76,6 +77,7 @@ export function getLongestString(strings) {
  */
 export function countPresent(attendance) {
   // TODO
+  return attendance.filter((x) => x === true).length;
 }
 
 /**
@@ -88,6 +90,10 @@ export function countPresent(attendance) {
  * @returns {string} the complementary DNA strand
  * @returns `null` if `dna` is not a string
  */
+//
+// complementDNA is incomplete
+//
 export function complementDNA(dna) {
   // TODO
+  if (typeof dna !== "string") return null;
 }
