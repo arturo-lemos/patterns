@@ -96,4 +96,16 @@ export function countPresent(attendance) {
 export function complementDNA(dna) {
   // TODO
   if (typeof dna !== "string") return null;
+
+  const complement = { A: "T", T: "A", C: "G", G: "C" };
+  let pair = "";
+
+  for (let i = 0; i < dna.length; i++) {
+    const original = dna[i];
+    if (!complement[original]) return null;
+    result += complement[original];
+  }
+  return pair;
 }
+//
+//This one was the most difficult and I had to get some assistance from AI to get it correct. I don't understand the return null portion fully even after asking co-pilot.
